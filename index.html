@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Veterinaria</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Clinica Veterinaria</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenido a nuestra clínica veterinaria.</p>
+            <img src="img/clinica.jpg" alt="Imagen de la clínica veterinaria">
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <table>
+                <caption>Lista de precios de vacunas y servicios veterinarios</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Especie</th>
+                        <th scope="col">Precio</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vacuna Antirrábica</td>
+                        <td>Perros y Gatos</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Desparasitación interna</td>
+                        <td>Gatos</td>
+                        <td>$10.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos para la cita veterinaria</legend>
+
+                    <label for="nombre_dueno">Nombre del dueño:</label>
+                    <input type="text" id="nombre_dueno" name="nombre_dueno" required>
+                    <br><br>
+
+                    <label for="telefono">Teléfono de contacto (10 dígitos):</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+                    <br><br>
+
+                    <label for="nombre_mascota">Nombre de la mascota:</label>
+                    <input type="text" id="nombre_mascota" name="nombre_mascota" required>
+                    <br><br>
+
+                    <label for="edad_mascota">Edad de la mascota (años):</label>
+                    <input type="number" id="edad_mascota" name="edad_mascota" min="0" max="30" required>
+                    <br><br>
+
+                    <label for="fecha_cita">Fecha y hora de reserva:</label>
+                    <input type="datetime-local" id="fecha_cita" name="fecha_cita" required>
+                    <br><br>
+
+                    <button type="submit">Agendar Cita</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Horarios de emergencia</h3>
+        <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+        <p>Sábados: 9:00 AM - 5:00 PM</p>
+        <p>Domingos: Cerrado</p>
+        
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            
+            <details>
+                <summary>¿Qué requisitos necesito para vacunar a mi mascota?</summary>
+                <p>Tu mascota debe estar sana, sin fiebre ni diarrea en los últimos 3 días, y tener más de 45 días de nacida.</p>
+            </details>
+
+            <details>
+                <summary>¿Atienden emergencias de madrugada?</summary>
+                <p>Sí, contamos con un timbre de emergencia y un veterinario de turno las 24 horas.</p>
+            </details>
+        </section>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Clinica Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
