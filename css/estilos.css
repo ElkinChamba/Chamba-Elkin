@@ -21,7 +21,10 @@ body {
     gap: 20px;
 }
 
-header, section, aside, footer {
+header,
+section,
+aside,
+footer {
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #cccccc;
@@ -68,7 +71,8 @@ caption {
     color: var(--color-primario);
 }
 
-th, td {
+th,
+td {
     border: 1px solid #aaa;
     padding: 10px;
     text-align: left;
@@ -101,7 +105,7 @@ label {
 
 input {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -144,17 +148,35 @@ details p {
 
 @media (min-width: 720px) {
     body {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "header header"
-            "main aside"
+            "main main"
+            "aside aside"
             "footer footer";
     }
 
-    header { grid-area: header; }
-    main { grid-area: main; }
-    aside { grid-area: aside; }
-    footer { grid-area: footer; }
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    aside {
+        grid-area: aside;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
 }
 
 img {
