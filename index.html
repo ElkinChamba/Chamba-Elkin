@@ -9,12 +9,14 @@
 </head>
 
 <body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
     <header>
         <div class="logo">
             <h1>VeterinaryFlow</h1>
             <p>Panel de Control y Atención al Paciente</p>
         </div>
-        <nav>
+        <nav aria-label="Principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -23,7 +25,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="contenido-principal">
         <section id="inicio">
             <div class="texto-inicio">
                 <h2>Bienvenido a tu portal de salud animal</h2>
@@ -36,7 +38,8 @@
                 </ul>
             </div>
             <div class="imagen-inicio">
-                <img src="img/clinica.jpg" alt="Logotipo principal de la clínica veterinaria">
+                <img src="img/clinica.jpg"
+                    alt="Fachada del edificio e instalaciones de la clínica veterinaria VeterinaryFlow">
             </div>
         </section>
 
@@ -82,7 +85,9 @@
 
                     <label for="telefono">Teléfono de contacto (10 dígitos):</label>
                     <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="0987654321"
-                        required>
+                        aria-describedby="ayuda-telefono" required>
+                    <p id="ayuda-telefono" class="texto-ayuda">Ingrese 10 dígitos numéricos sin espacios ni guiones
+                        (ejemplo: 0987654321).</p>
 
                     <label for="nombre_mascota">Nombre de la mascota:</label>
                     <input type="text" id="nombre_mascota" name="nombre_mascota" placeholder="Ej. Firulais" required>
