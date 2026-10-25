@@ -2,8 +2,12 @@
     --color-fondo: #f1f5f9;
     --color-texto: #1e293b;
     --color-primario: #006672;
+    --color-primario-hover: #004d56;
     --color-foco: #f59e0b;
     --color-blanco: #ffffff;
+    --color-borde: #cbd5e1;
+    --color-fila-clara: #f8fafc;
+    --color-texto-secundario: #475569;
 }
 
 * {
@@ -17,7 +21,7 @@ body {
     color: var(--color-texto);
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    padding: 20px;
+    padding: 15px;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -46,7 +50,7 @@ section,
 #faq,
 footer {
     background-color: var(--color-blanco);
-    padding: 25px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
@@ -61,7 +65,7 @@ h3 {
 }
 
 h2 {
-    border-bottom: 1px solid #cbd5e1;
+    border-bottom: 1px solid var(--color-borde);
     padding-bottom: 8px;
 }
 
@@ -142,9 +146,9 @@ caption {
 
 th,
 td {
-    padding: 12px 15px;
+    padding: 10px 8px;
     text-align: left;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--color-borde);
 }
 
 th {
@@ -153,7 +157,7 @@ th {
 }
 
 .fila-clara {
-    background-color: #f8fafc;
+    background-color: var(--color-fila-clara);
 }
 
 fieldset {
@@ -179,9 +183,9 @@ label {
 input {
     width: 100%;
     padding: 12px;
-    border: 1.5px solid #cbd5e1;
+    border: 1.5px solid var(--color-borde);
     border-radius: 6px;
-    background-color: #f8fafc;
+    background-color: var(--color-fila-clara);
     font-family: inherit;
     transition: all 0.3s ease;
 }
@@ -193,7 +197,7 @@ input:focus {
 
 .texto-ayuda {
     font-size: 0.85rem;
-    color: var(--color-texto);
+    color: var(--color-texto-secundario);
     margin-top: 6px;
 }
 
@@ -212,7 +216,7 @@ button {
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: var(--color-primario-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -233,7 +237,7 @@ summary {
 }
 
 summary:hover {
-    background-color: #e2e8f0;
+    background-color: var(--color-borde);
 }
 
 details p {
@@ -242,12 +246,13 @@ details p {
 
 footer {
     text-align: center;
-    color: #475569;
+    color: var(--color-texto-secundario);
     font-size: 0.9rem;
 }
 
 @media (min-width: 720px) {
     body {
+        padding: 20px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
@@ -264,7 +269,13 @@ footer {
     #horarios,
     #faq,
     footer {
+        padding: 25px;
         margin-bottom: 0;
+    }
+
+    th,
+    td {
+        padding: 12px 15px;
     }
 
     main {
